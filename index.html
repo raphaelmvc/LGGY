@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<!-- Adicione no <head> se ainda não tiver -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    
+
+    <title>Responsive dropdown menu - Bedimcode</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="#" class="nav__logo">
+            <img src="/img/LGCYWHITE.png" alt="Company Logo" class="nav__logo-img">
+          </a>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+
+        
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+         <ul class="nav__list">
+           <li><a href="#home" class="nav__link">Home</a></li>
+           <li><a href="#influencer" class="nav__link">Influencers</a></li>
+           <li><a href="#partners" class="nav__link">Partners</a></li>
+           <li><a href="#team" class="nav__link">Our Team</a></li>
+           <li><a href="#contact" class="nav__link contact-button">Contact Us</a></li>
+         </ul>
+       </div>
+
+       
+      
+ 
+      </nav>
+    </header>
+
+<!-- Popup Form -->
+<div class="popup" id="contact-popup">
+   <div class="popup__content">
+       <span class="popup__close" id="popup-close">&times;</span>
+       <h2>Contact Us</h2>
+       <div>
+           <a href="#" id="link-influencer" onclick="showInfluencerFields()">Influencers</a> |
+           <a href="#" id="link-company" onclick="showCompanyFields()">Company</a>
+       </div>
+
+       <form id="contact-form">
+           <div id="influencer-fields" class="hidden">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" required>
+               <label for="phone">Phone Number:</label>
+               <input type="tel" id="phone" name="phone" required>
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+               <label for="message">Message:</label>
+               <textarea id="message" name="message" required></textarea>
+           </div>
+           <div id="company-fields" class="hidden">
+               <label for="company-name">Company Name:</label>
+               <input type="text" id="company-name" name="company-name" required>
+               <label for="website">Website:</label>
+               <input type="url" id="website" name="website" required>
+               <label for="company-email">Email:</label>
+               <input type="email" id="company-email" name="company-email" required>
+               <label for="company-message">Message:</label>
+               <textarea id="company-message" name="company-message" required></textarea>
+           </div>
+           <button type="submit">Send</button>
+       </form>
+   </div>
+</div>
+
+
+ 
+
+    <section id="home" class="home">
+      <div class="home_info">
+        <h1>
+          The Biggest <span>Web3</span> Influencer marketing network.
+        </h1>
+      </div>
+      <img src="/img/globe.gif" alt="Globe"/>
+    </section>
+
+    <section id="info" class="info">
+      <div class="items-wrapper">
+        <div class="item">
+          <div class="item__title">28M+</div>
+          <div class="item__description">Global Reach</div>
+        </div>
+        <div class="item">
+          <div class="item__title">300+</div>
+          <div class="item__description">Web3 KOL's</div>
+        </div>
+        <div class="item">
+          <div class="item__title">40+</div>
+          <div class="item__description">Satisfied Clients</div>
+        </div>
+      </div>
+      <div class="line"></div>
+    </section>
+
+    <section id="influencer" class="influencer">
+      <div class="influencer_info">
+        <h1>LGCY INTERNATIONAL REACH</h1>
+        <p>Worldwide Creators Team</p>
+        <div class="button_container">
+          <a id="btn1" class="btn">South America</a>
+          <a id="btn2" class="btn">North America</a>
+          <a id="btn3" class="btn">Europe</a>
+          <a id="btn4" class="btn">Asia</a>
+          <a id="btn5" class="btn">Oceania</a>
+        </div>
+        <div class="content_container">
+          <div id="map-container" class="map-container">
+            <!-- O SVG será carregado aqui -->
+          </div>
+          <div class="content_text">
+            <div class="text_block">
+              <h2 id="text1">Text 1</h2>
+              <p id="text2">Text 2</p>
+            </div>
+            <div class="text_block">
+              <h2 id="text3">Text 3</h2>
+              <p id="text4">Text 4</p>
+            </div>
+            <div class="text_block">
+              <h2 id="text5">Text 5</h2>
+              <p id="text6">Text 6</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="partners" class="partners">
+      <div class="partners_info">
+        <h1>OUR CLIENTS</h1>
+        <hr />
+        <div class="partners_in">
+          <ul>
+            <li>
+              <img src="/img/upland.svg" alt="" />
+              <img src="/img/uplandHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/xcadnetwork.svg" alt="" />
+              <img src="/img/xcadnetworkHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/resso.svg" alt="" />
+              <img src="/img/ressoHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/daomaker.svg" alt="" />
+              <img src="/img/daomakerHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/reserva.svg" alt="" />
+              <img src="/img/reservanHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/havaianas.svg" alt="" />
+              <img src="/img/havaianasHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/coinEx.svg" alt="" />
+              <img src="/img/coinexHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/fireStarter.svg" alt="" />
+              <img src="/img/firestarterHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/kryptomon.svg" alt="" />
+              <img src="/img/kryptonHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/animacaBrands.svg" alt="" />
+              <img src="/img/animacabrandsHover.svg" alt="" />
+            </li>
+            <li>
+              <img src="/img/bilibili.svg" alt="" />
+              <img src="/img/11.svg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    
+
+    <section id="team" class="team">
+      <div class="team_info">
+        <h1>Our Team</h1>
+        <div class="team-container">
+          <div class="team-member">
+            <div class="member-photo">
+               <img src="/img/arthur.png" alt="Arthur" />
+            </div>
+            <div class="member-name">ARTHUR VICTORIO</div>
+            <div class="member-description">CEO</div>
+            <div class="icon">
+              <a href="https://www.youtube.com"><i class="ri-youtube-line"></i></a>
+              <a href="https://www.twitter.com"><i class="ri-twitter-line"></i></a>
+              <a href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com"><i class="ri-linkedin-line"></i></a>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="/img/ariel.png" alt="Ariel" />
+            </div>
+            <div class="member-name">Ariel Mondelo</div>
+            <div class="member-description">Co-founder & CMO</div>
+            <div class="icon">
+              <a href="https://www.youtube.com"><i class="ri-youtube-line"></i></a>
+              <a href="https://www.twitter.com"><i class="ri-twitter-line"></i></a>
+              <a href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com"><i class="ri-linkedin-line"></i></a>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-photo">
+               <img src="/img/sofia.png" alt="Ariel" />
+            </div>
+            <div class="member-name">SOPHIA VELARDI</div>
+            <div class="member-description">Co-founder & COO</div>
+            <div class="icon">
+              <a href="https://www.youtube.com"><i class="ri-youtube-line"></i></a>
+              <a href="https://www.twitter.com"><i class="ri-twitter-line"></i></a>
+              <a href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com"><i class="ri-linkedin-line"></i></a>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-photo">
+               <img src="/img/raphael.png" alt="Ariel" />
+            </div>
+            <div class="member-name">RAPHAEL MONTEIRO</div>
+            <div class="member-description">Partnerships Manager</div>
+            <div class="icon">
+              <a href="https://www.youtube.com"><i class="ri-youtube-line"></i></a>
+              <a href="https://www.twitter.com"><i class="ri-twitter-line"></i></a>
+              <a href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com"><i class="ri-linkedin-line"></i></a>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-photo">
+               <img src="/img/arthur.png" alt="Ariel" />
+            </div>
+            <div class="member-name">REC</div>
+            <div class="member-description">Business Dev. Manager</div>
+            <div class="icon">
+              <a href="https://www.youtube.com"><i class="ri-youtube-line"></i></a>
+              <a href="https://www.twitter.com"><i class="ri-twitter-line"></i></a>
+              <a href="https://www.instagram.com"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com"><i class="ri-linkedin-line"></i></a>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="testimonials" class="testimonials">
+      <div class="testimonial-heading">
+        <span>What people say about us?</span>
+    </div>
+    <div class="testimonial-box-container">
+        <div class="testimonial-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/img/R1.jpg" />
+                    </div>
+                    <div class="name-user">
+                        <strong>Luiz Octávio</strong>
+                        <span>CEO Dux</span>
+                    </div>
+                </div>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="client-comment">
+              <p>Trabalhar com a LGCY foi sem dúvida a melhor experiência que tive em campanha com influenciadores, não só na web3 mas também na web2.</p>
+              <br>
+              <p>Depois do briefing o processo de seleção, orçamento e entrega das campanhas aconteceu sem eu ter que me preocupar. Se tornaram minha escolha pra qualquer ação futura.</p>
+              
+            </div>
+        </div>
+        <div class="testimonial-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/img/R2.jpg" />
+                    </div>
+                    <div class="name-user">
+                        <strong>Ney Neto</strong>
+                        <span>Upland Latam Lead</span>
+                    </div>
+                </div>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="client-comment">
+                <p>Tenho casos de sucesso de campanhas com a Legacy no Brasil, Estados Unidos e Japão. Acredito que eles resolvam uma dor do mercado web3 que é oferecer um acompanhamento profissional e estuturado para as campanhas que envolvem marketing de influência no setor de crypto, desde o casting, alinhamento do briefing, mensuração dos resutados e acompanhamento dos diferentes influencers e KOLs envolvidos no projeto. Bom contar com a oganização e alcance da LGCY!
+                </p>
+            </div>
+        </div>
+        <div class="testimonial-box">
+            <div class="box-top">
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/img/R3.jpg" />
+                    </div>
+                    <div class="name-user">
+                        <strong>Yuri Lindoso</strong>
+                        <span>Creator Investimento Sem KO</span>
+                    </div>
+                </div>
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="client-comment">
+              <p>Colaborar com a LGCY foi a experiência mais gratificante que já tive em campanhas com influenciadores.</p>
+              <br>
+              <p>Desde o processo de seleção até orçamento e execução das campanhas, transcorreu de forma impecável, sem a necessidade de maiores preocupações da minha parte. Sem dúvida, a LGCY se consolidou como minha escolha preferencial.</p>
+              
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="about-us" class="about-us">
+    <div class="about-heading">
+        <span>How it Works</span>
+    </div>
+    <div class="about-box-container slider">
+        <div class="about-box">
+          <img src="/img/2.svg" alt="Initial Contact">
+            <h3>Initial Contact</h3>
+            <p>Reach out to us through this form.</p>
+        </div>
+        <div class="about-box">
+          <img src="/img/3.svg" alt="Initial Contact">
+            <h3>Discovery & Briefing</h3>
+            <p>Set up a meeting where we learn about your brand’s goals, needs, and objectives.</p>
+        </div>
+        <div class="about-box">
+          <img src="/img/4.svg" alt="Initial Contact">
+            <h3>Customized Strategy</h3>
+            <p>Our team will create a personalized campaign plan, choosing the right influencers and strategies to maximize your results.</p>
+        </div>
+        <div class="about-box">
+          <img src="/img/5.svg" alt="Initial Contact">
+            <h3>Contract & Agreement</h3>
+            <p>Once you’re ready, review and sign the agreement to begin the campaign.</p>
+        </div>
+        <div class="about-box">
+          <img src="/img/6.svg" alt="Initial Contact">
+            <h3>Campaign Execution</h3>
+            <p>We manage the influencers to create and distribute content that aligns with your brand message.</p>
+        </div>
+        <div class="about-box">
+          <img src="/img/7.svg" alt="Initial Contact">
+            <h3>Monitoring & Reporting</h3>
+            <p>Throughout the campaign, we monitor progress and provide you with detailed performance reports.</p>
+        </div>
+        <div class="about-box">
+          <img src="/img/8.svg" alt="Initial Contact">
+            <h3>Data Analysis & Campaign Review</h3>
+            <p>At the end, we analyze the data and deliver a full review of the campaign’s results.</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer>
+      <p>
+        &copy; 2024 <span>GGCY AGENCY</span>. Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="/assets/js/globo.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='https://kit.fontawesome.com/c8e4d183c2.js'></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
