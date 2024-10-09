@@ -1,0 +1,84 @@
+/* Estilos básicos do popup */
+.popup {
+    display: none; /* Esconde o popup por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 32, 41, 0.9); /* Fundo escuro com leve transparência */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Adicione esta linha */
+}
+
+
+.popup__content {
+    background: #1e2029; /* Cor de fundo do popup */
+    padding: 40px; /* Aumenta o padding para um popup maior */
+    border-radius: 10px;
+    width: 400px; /* Aumenta a largura do popup */
+    position: relative;
+    color: white; /* Cor do texto */
+}
+
+.popup__content div {
+    text-align: center; /* Centraliza o texto dentro do div */
+    margin: 20px 0; /* Espaçamento acima e abaixo dos links */
+}
+
+.popup__content a {
+    color: var(--purple); /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    margin: 0 10px; /* Espaçamento entre os links */
+}
+
+.popup__content a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+.popup__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white; /* Cor do botão de fechar */
+}
+
+.popup h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+label {
+    display: block; /* Faz com que o label ocupe toda a largura disponível */
+    margin: 10px 0 5px; /* Espaçamento em volta dos labels */
+}
+
+input, textarea {
+    width: 100%; /* Define a largura dos inputs e textarea */
+    padding: 10px; /* Adiciona espaçamento interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaçamento abaixo dos inputs */
+}
+
+button {
+    background-color: var(--purple); /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda */
+    padding: 10px 15px; /* Adiciona espaçamento interno ao botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    display: block; /* Faz o botão ocupar toda a largura */
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+button:hover {
+    background-color: var(--purple); /* Muda a cor ao passar o mouse */
+}
+.hidden {
+    display: none;
+}
+

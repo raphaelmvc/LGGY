@@ -1,0 +1,179 @@
+/*.team {
+  background-image: url('/img/team.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 100%; 
+  padding: 20px;
+}*/
+
+
+.team_info {
+  margin-top: 50px !important;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.member-name {
+  padding-top: 30px;
+  font-size: 22px;
+  font-weight: 300;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--text);
+  font-family: "Anton", sans-serif;
+  letter-spacing: 2px;
+}
+
+.member-description {
+  padding-top: 10px;
+  color: grey;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+}
+
+.team_info h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: var(--text);
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+.team-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  padding-top: 50px;
+  gap: 30px;
+}
+
+.team-container .team-member {
+  width: 300px; /* Definindo uma largura fixa para os membros */
+  height: 300px;
+  background-color: #1e2029;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px; /* Adiciona espaço entre os membros */
+  cursor: pointer;
+}
+.team-container .team-member img {
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.icon {
+  margin-top: 25px;
+  font-size: 20px;
+  transition: 0.5s;
+  color: var(--text);
+}
+
+.icon a {
+  color: inherit; /* Para herdar a cor do elemento pai */
+  margin-right: 10px; /* Espaço à direita dos ícones */
+  transition: color 0.5s; /* Transição para a cor */
+}
+
+.icon a:hover {
+  color: var(--purple); /* Cor ao passar o mouse */
+}
+
+.icon a:last-child {
+  margin-right: 0; /* Remove a margem do último ícone */
+}
+
+
+
+@media (max-width: 992px) {
+  .team-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 20px;
+  }
+  
+  .team-container .team-member {
+    width: 250px; 
+    height: 320px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  
+  .team-container .team-member {
+    width: 200px; 
+  }
+  .member-name {
+    font-size: 16px;
+  }
+  
+  .member-description {
+    font-size: 11px;
+  }
+}
+@media (max-width: 480px) {
+  .team-container {
+    padding-left: 20px; /* Reduz o padding lateral */
+    padding-right: 20px; /* Reduz o padding lateral */
+    gap: 15px; /* Ajusta o espaço entre os membros */
+  }
+
+  .team-container .team-member {
+    width: 250px; /* Reduz a largura dos membros */
+    height: 300px; /* Ajusta a altura dos membros */
+    padding: 15px; /* Ajusta o padding interno */
+  }
+
+  .member-name {
+    font-size: 18px; /* Reduz o tamanho da fonte do nome */
+  }
+  
+  .member-description {
+    font-size: 13px; /* Reduz o tamanho da fonte da descrição */
+  }
+
+  .team_info h1 {
+    font-size: 24px; /* Reduz o tamanho do título */
+  }
+  .icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 390px) {
+  .team-container {
+    padding-left: 10px; /* Reduz ainda mais o padding lateral */
+    padding-right: 10px; /* Reduz ainda mais o padding lateral */
+  }
+
+  .team-container .team-member {
+    width: 250px; /* Reduz ainda mais a largura dos membros */
+    height: 300px; /* Ajusta a altura dos membros */
+  }
+
+  .member-name {
+    font-size: 18px; /* Tamanho ainda menor para o nome */
+  }
+  
+  .member-description {
+    font-size: 12px; /* Tamanho ainda menor para a descrição */
+  }
+
+  .team_info h1 {
+    font-size: 20px; /* Tamanho ainda menor para o título */
+  }
+}
+
+
+
+

@@ -1,0 +1,135 @@
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.about-heading {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-heading span {
+  font-size: 35px;
+  text-transform: uppercase;
+  color: var(--text);
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.about-box-container {
+    position: relative;
+    width: 500px; /* Largura ajustada */
+    height: 300px; /* Altura ajustada para caber o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-box {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    width: 800px;
+    height: 350px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: #1e2029;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.about-box.active {
+    opacity: 1;
+}
+
+.about-box h3 {
+    margin-top: 30px;
+  font-size: 22px;
+  font-weight: 300;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--text);
+  font-family: "Anton", sans-serif;
+  letter-spacing: 2px;
+}
+
+.about-box p {
+  padding-top: 10px;
+  color: grey;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+}
+
+.about-box img {
+  width: 200px; /* Tamanho ajustável conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 10px; /* Espaçamento entre a imagem e o título */
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Centraliza a imagem */
+  border-radius: 5px; /* Cantos arredondados (opcional) */
+}
+
+.about-box:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.3s;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0; /* Tamanho da seta */
+  color: var(--text); /* Cor da seta */
+  z-index: 1; /* Para garantir que as setas apareçam acima das caixas */
+  width: 30px; /* Largura das setas */
+  height: 30px; /* Altura das setas */
+}
+
+.slick-prev {
+  left: 50px; /* Distância da borda esquerda */
+}
+
+.slick-next {
+  right: 50px; /* Distância da borda direita */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: ""; /* Remove o conteúdo padrão */
+}
+
+.slick-prev:before {
+  content: "\f104"; /* Ícone de seta esquerda (Font Awesome) */
+  font-family: "Font Awesome 5 Free"; /* Define a fonte */
+  font-weight: 900; /* Define o peso da fonte */
+}
+
+.slick-next:before {
+  content: "\f105"; /* Ícone de seta direita (Font Awesome) */
+  font-family: "Font Awesome 5 Free"; /* Define a fonte */
+  font-weight: 900; /* Define o peso da fonte */
+}
+
+@media (max-width: 1060px) {
+  .about-box {
+    width: 45%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 790px) {
+  .about-box {
+    width: 100%;
+  }
+}

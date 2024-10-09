@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&display=swap");
+
+.influencer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.influencer_info h1 {
+  margin-top: 100px;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text);
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.influencer_info p {
+  margin-top: 25px;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text);
+}
+
+.button_container {
+  margin-top: 60px;
+  display: flex;
+  gap: 55px;
+  justify-content: center;
+}
+
+.button_container .btn {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--text);
+  text-decoration: none;
+  border: none;
+  background: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.button_container .btn:hover,
+.button_container .btn.active {
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.button_container .btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 70%;
+  height: 1px;
+  background: var(--purple);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+
+.button_container .btn:hover::after,
+.button_container .btn.active::after {
+  width: 60%;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.content_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 50px auto 0;
+  margin-left: -80px;
+  gap: 70px;
+  color: var(--text);
+}
+
+.content_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.text_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #1e2029;
+  width: 200px;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
+
+
+.text_block h2 {
+  font-size: 24px;
+  color: var(--purple);
+  font-family: "Anton", sans-serif;
+  margin: 0;
+  font-weight: 300;
+}
+
+.text_block p {
+  font-size: 18px;
+  font-family: "Anton", sans-serif;
+}
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5,
+.text6 {
+  font-size: 144px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.map-container {
+  width: 50%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.map-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-container svg path {
+  fill: lightgray;
+  stroke: black;
+  stroke-width: 0.5;
+  transition: fill 0.3s ease;
+}
+
+.map-container svg path:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .map-container {
+    width: 40%;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-left: -60px;
+    margin-top: 20px;
+  }
+
+  .map-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .content_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 50px auto 0;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .map-container {
+    width: 35%;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-left: -30px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    width: 45%;
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    margin-left: -30px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 632px) {
+  .button_container {
+    gap: 35px;
+  }
+
+  .button_container .btn {
+    font-size: 10px;
+  }
+
+  .influencer_info h1 {
+    font-size: 40px;
+  }
+
+  .influencer_info p {
+    font-size: 18px;
+  }
+
+  .content_text {
+    margin-bottom: 0;
+  }
+
+  .text_block {
+    width: 170px;
+    height: 80px;
+  }
+
+  .text_block h2 {
+    font-size: 18px;
+  }
+
+  .text_block p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button_container {
+    flex-direction: column; /* Alinha os botões em coluna */
+    gap: 20px; /* Ajusta o espaçamento entre os botões */
+    text-align: center;
+  }
+
+  .button_container .btn {
+    font-size: 9px; /* Reduz o tamanho da fonte dos botões */
+  }
+
+  .influencer_info h1 {
+    font-size: 32px; /* Reduz o tamanho da fonte do título */
+  }
+
+  .influencer_info p {
+    font-size: 16px; /* Reduz o tamanho da fonte da descrição */
+  }
+
+  .content_container {
+    flex-direction: column; /* Alinha o conteúdo em coluna */
+    gap: 30px; /* Ajusta o espaçamento entre os itens */
+
+  }
+
+  .content_text {
+    flex-direction: row;
+  }
+
+  .text_block {
+    width: 120px; /* Ajusta a largura dos blocos de texto */
+    height: 100px; /* Ajusta a altura dos blocos de texto */
+  }
+
+  .text_block h2 {
+    font-size: 17px; /* Reduz o tamanho do título dentro do bloco */
+  }
+
+  .text_block p {
+    font-size: 14px; /* Reduz o tamanho da descrição dentro do bloco */
+  }
+
+  .map-container {
+    width: 90%; /* Ajusta a largura do mapa */
+    margin-left: 10px;
+  }
+
+  .button_container .btn::after {
+    background: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .button_container .btn {
+    font-size: 8px; /* Tamanho ainda menor para os botões */
+  }
+
+  .influencer_info h1 {
+    font-size: 28px; /* Tamanho ainda menor para o título */
+  }
+
+  .influencer_info p {
+    font-size: 14px; /* Tamanho ainda menor para a descrição */
+  }
+
+  .text_block {
+    width: 100px; /* Ajusta a largura dos blocos de texto */
+    height: 80px; /* Ajusta a altura dos blocos de texto */
+    
+  }
+
+  .text_block h2 {
+    font-size: 14px; /* Tamanho ainda menor do título dentro do bloco */
+  }
+
+  .text_block p {
+    font-size: 12px; /* Tamanho ainda menor da descrição dentro do bloco */
+  }
+
+  .map-container {
+    width: 100%; /* Ajusta a largura do mapa para ocupar 100% */
+  }
+}
+
+
+
